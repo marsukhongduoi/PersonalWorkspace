@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonStartServer = new System.Windows.Forms.Button();
+            this.textBoxServerStatus = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // buttonStartServer
+            // 
+            this.buttonStartServer.Location = new System.Drawing.Point(83, 209);
+            this.buttonStartServer.Name = "buttonStartServer";
+            this.buttonStartServer.Size = new System.Drawing.Size(109, 40);
+            this.buttonStartServer.TabIndex = 0;
+            this.buttonStartServer.Text = "Start Main Server";
+            this.buttonStartServer.UseVisualStyleBackColor = true;
+            this.buttonStartServer.Click += new System.EventHandler(this.buttonStartServer_Click);
+            // 
+            // textBoxServerStatus
+            // 
+            this.textBoxServerStatus.Location = new System.Drawing.Point(13, 13);
+            this.textBoxServerStatus.Multiline = true;
+            this.textBoxServerStatus.Name = "textBoxServerStatus";
+            this.textBoxServerStatus.Size = new System.Drawing.Size(259, 190);
+            this.textBoxServerStatus.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.textBoxServerStatus);
+            this.Controls.Add(this.buttonStartServer);
+            this.Name = "Form1";
+            this.Text = "Server";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonStartServer;
+        private System.Windows.Forms.TextBox textBoxServerStatus;
     }
 }
 

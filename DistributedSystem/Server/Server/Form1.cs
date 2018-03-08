@@ -16,5 +16,10 @@ namespace Server
         {
             InitializeComponent();
         }
+
+        private void buttonStartServer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
