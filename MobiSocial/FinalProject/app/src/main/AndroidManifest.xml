@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobisocial.tyranttitan.finalproject">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".ReminderService"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"></service>
+
+        <receiver android:name=".NotificationReceiver">
+            <intent-filter>
+                <action android:name="YES_ACTION"/>
+                <action android:name="NO_ACTION"/>
+
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Alarm" android:exported="true">
+            <intent-filter>
+                <action android:name="START_ALARM" >
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
